@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import User from './components/User';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>List users from Firebase</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+              <div class="table-responsive">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th><span>Name</span></th>
+                      <th><span>Email</span></th>
+                      <th><span>Phone</span></th>
+                    </tr>
+                  </thead>
+                  <User />
+                  
+                </table>
+              </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
